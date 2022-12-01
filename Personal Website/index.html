@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width", initial-scale="0">
+        <link rel="stylesheet" href="css/style.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" charset="utf-8"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/easy-pie-chart/2.1.6/jquery.easypiechart.min.js" charset="utf-8"></script>
+        <script src="https://kit.fontawesome.com/8af94418b0.js" crossorigin="anonymous"></script>
+        
+        <title>Personal Website</title>
+    </head>
+    <body>
+        <header>
+            <img src="img/logo.png" alt="logo" height="49px" width="137px">
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#contact">Contact Me</a></li>
+                    <li>  
+                        <a href="javascript:void(0);" onclick="myFunction()">
+                            <i class="fa fa-bars" id="iconbar"></i>
+                        </a>
+                    </li>
+                </ul>
+                
+            </nav>
+        </header>
+        
+
+        <div id="wrap">
+            <!-- Icon Fixed -->
+            <div class="icon-fixed">
+                <a href="www.facebook.com/baira.jamela"><i class="fa-brands fa-square-facebook"></i></a>
+                <a href="https://mail.google.com/mail/?view=cm&source=mailto=[bairajamela@gmail.com]"><i class="fa-solid fa-envelope"></i></a>
+                <a href="https://www.linkedin.com/in/jamela-marithe-baira-1a3623251/"><i class="fa-brands fa-linkedin"><span></span></i></a>
+                <a href="https://github.com/Jarithe"><i class="fa-brands fa-square-github"><span></span></i></a>
+            </div>
+
+            <!-- HOME -->
+            <div class="container">
+                <section id="home">
+                    <div id="s-home1">
+                        <h3>Hi! I am</h3>
+                        <h1>Jamela Baira</h1>
+                        <p>Currently taking Bachelor of Science in Information Technology.</p>
+                    </div>
+                    <div id="s-home2">
+                        <img src="img/home-tri.png" alt="illustration" height="500px" width="500px">
+                    </div>
+                </section>
+            </div>
+
+            <!-- ABOUT -->
+            <div class="container reveal">
+                <section id="about">
+                    <div id="s-about1">
+                        <h1>About.</h1>
+                        <p>
+                            I'm Jamela Baira and currently taking Bachelor of Science in Information Technology at Batangas State University. I have a little knowledge about web development.
+                        </p>
+                    </div>
+                    <div id="s-about2">
+                        <!--My Photo-->
+                        <img src="img/me.png" alt="" height="450px" width="550px">
+                    </div>
+                </section>
+            </div>
+
+            <!-- SKILLS -->
+            <div class="container reveal">
+                <section id="skills">
+                    <div id="s-skills1">
+                        <h1>Skills.</h1>
+                        <p>This is my skills progress for web developmnet and continuously practicing for more improvement.</p>
+                    </div>
+                    <div id="s-skills2">
+                        <!--radial diagram-->
+                            <div class="box">
+                              <div class="chart" data-percent="50" ><span>50%</span></div>
+                              <h3>HTML</h3>
+                            </div>
+                            <div class="box">
+                              <div class="chart" data-percent="50" ><span>40%</span></div>
+                              <h3>CSS</h3>
+                            </div>
+                            <div class="box">
+                              <div class="chart" data-percent="30" ><span>20%</span></div>
+                              <h3>JAVASCRIPT</h3>
+                            </div>
+                            <div class="box">
+                                <div class="chart" data-percent="10" ><span>10%</span></div>
+                                <h3>PHP</h3>
+                            </div>
+                            <div class="box">
+                                <div class="chart" data-percent="10" ><span>10%</span></div>
+                                <h3>MYSQL</h3>
+                            </div>
+                    </div>
+                </section>
+                <img class="design" src="img/design.png"></img>
+            </div>
+
+            <!-- CONTACT -->
+            <div class="container reveal">
+                <section id="contact">
+                    <div id="s-contact1">
+                        <h1>Contact Me.</h1>
+                        <div id="contact-info">
+                            <h3>Social Links</h3>
+                            <i class="fa-brands fa-square-facebook"><span><a href="www.facebook.com/baira.jamela">Facebook</a></span></i>
+                            <i class="fa-solid fa-envelope"><span><a href="https://mail.google.com/mail/?view=cm&source=mailto=[bairajamela@gmail.com]">Gmail</a></span></i>
+                            <i class="fa-brands fa-linkedin"><span><a href="https://www.linkedin.com/in/jamela-marithe-baira-1a3623251/">LinkedIN</a></span></i>
+                            <i class="fa-brands fa-square-github"><span><a href="https://github.com/JamelaBaira">Github</a></span></i>
+                        </div>
+                    </div>
+                    <div id="s-contact2">
+                        <h2>Message Me.</h2>
+                        <form action="" method="get">
+                            <label>Name</label>
+                            <input type="text">
+                            <label>Email</label>
+                            <input type="email" name="email" id="email">
+                            <label>Message</label>
+                            <textarea name="message" id="" cols="30" rows="10"></textarea>
+                            <input type="submit" value="Send Message">
+                        </form>
+                    </div>
+                </section>
+                <img class="design" src="img/design.png"></img>
+            </div>
+        </div>
+        <script type="text/javascript">
+                $(function() {
+                    $('.chart').easyPieChart({
+                    size: 130,
+                    barColor: "#A46BD3",
+                    scaleLength: 0,
+                    lineWidth: 15,
+                    trackColor: "#525151",
+                    lineCap: "circle",
+                    animate: 2000,
+                    });
+                });
+
+                window.addEventListener('scroll', reveal);
+
+                    function reveal(){
+                    var reveals = document.querySelectorAll('.reveal');
+
+                    for(var i = 0; i < reveals.length; i++){
+
+                        var windowheight = window.innerHeight;
+                        var revealtop = reveals[i].getBoundingClientRect().top;
+                        var revealpoint = 150;
+                        console.log(reveals);
+                        if(revealtop < windowheight - revealpoint){
+                        reveals[i].classList.add('active');
+                        }
+                        else{
+                        reveals[i].classList.remove('active');
+                        }
+                    }
+                }
+        </script>
+    </body>
+</html>
